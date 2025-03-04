@@ -1,0 +1,81 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) 2025 Thundercomm, Inc. All rights reserved.
+ */
+
+ /dts-v1/;
+ /plugin/;
+ 
+ &soc {
+    geniqup@9c0000 {
+        i2c@984000 {
+       status = "okay";
+   };//i2c1
+
+        i2c@98c000 {
+       status = "disabled";
+   };//i2c3
+
+        i2c@988000 {
+       status = "okay";
+   };//i2c2
+
+        spi@988000 {
+       status = "disabled";
+   };//spi2
+
+        serial@988000 {
+       status = "okay";
+   };//uart2
+        
+        i2c@998000 {
+       status = "disabled";
+   };//i2c6
+
+        spi@998000 {
+       status = "disabled";
+   };//spi6
+
+        serial@998000 {
+       status = "disabled";
+   };//uart6
+    };
+
+    geniqup@ac0000 {
+        i2c@a84000 {
+            lt,lt9611@39 {
+                config-mode = "edidAdaptiveResolution";
+            };
+        };//i2c8
+
+        i2c@a80000 {
+            status = "disabled";
+        };//i2c8
+
+        spi@a80000 {
+            status = "disabled";
+        };//spi8
+
+        serial@a80000 {
+            status = "disabled";
+        };//uart8
+        
+        i2c@a90000 {
+            status = "disabled";
+        };//i2c12
+
+        spi@a90000 {
+            status = "okay";
+        };//spi12
+
+        serial@a90000 {
+            status = "disabled";
+        };//uart12
+    };
+};
+
+&sound {
+pinctrl-0 = <&mi2s0_data0_sleep>, <&mi2s0_data1_sleep>, <&mi2s0_mclk>, <&mi2s0_sclk_sleep>, <&mi2s0_ws_sleep>, <&lpass_ext_mas_clk1_a_sleep>, <&lpass_qua_mi2s_sclk_sleep>, <&lpass_qua_mi2s_ws_sleep>, <&lpass_qua_mi2s_data0_sleep>, <&lpass_qua_mi2s_data1_sleep>, <&lpass_qua_mi2s_data2_sleep>, <&lpass_qua_mi2s_data3_sleep>, <&lpass_lpi_i2s1_clk_sleep>, <&lpass_lpi_i2s1_ws_sleep>, <&lpass_lpi_i2s1_data0_sleep>, <&lpass_lpi_i2s1_data1_sleep>, <&mi2s2_sclk_sleep>, <&mi2s2_ws_sleep>, <&mi2s2_data0_sleep>, <&mi2s2_data1_sleep>;
+pinctrl-1 = <&mi2s0_data0>, <&mi2s0_data1>, <&mi2s0_mclk>, <&mi2s0_sclk>, <&mi2s0_ws>, <&lpass_ext_mas_clk1_a>, <&lpass_qua_mi2s_sclk>, <&lpass_qua_mi2s_ws>, <&lpass_qua_mi2s_data0>, <&lpass_qua_mi2s_data1>, <&lpass_qua_mi2s_data2>, <&lpass_qua_mi2s_data3>, <&lpass_lpi_i2s1_clk>, <&lpass_lpi_i2s1_ws>, <&lpass_lpi_i2s1_data0>, <&lpass_lpi_i2s1_data1>, <&mi2s2_sclk>, <&mi2s2_ws>, <&mi2s2_data0>, <&mi2s2_data1>;
+pinctrl-2 = <&mi2s0_data0_sleep>, <&mi2s0_data1_sleep>, <&mi2s0_mclk>, <&mi2s0_sclk_sleep>, <&mi2s0_ws_sleep>, <&lpass_ext_mas_clk1_a_sleep>, <&lpass_qua_mi2s_sclk_sleep>, <&lpass_qua_mi2s_ws_sleep>, <&lpass_qua_mi2s_data0_sleep>, <&lpass_qua_mi2s_data1_sleep>, <&lpass_qua_mi2s_data2_sleep>, <&lpass_qua_mi2s_data3_sleep>, <&lpass_lpi_i2s1_clk_sleep>, <&lpass_lpi_i2s1_ws_sleep>, <&lpass_lpi_i2s1_data0_sleep>, <&lpass_lpi_i2s1_data1_sleep>, <&mi2s2_sclk_sleep>, <&mi2s2_ws_sleep>, <&mi2s2_data0_sleep>, <&mi2s2_data1_sleep>;
+};
