@@ -11,13 +11,13 @@
        status = "okay";
    };//i2c1
         i2c@98c000 {
-       status = "disable";
+       status = "disabled";
    };//i2c3
         i2c@988000 {
-       status = "disable";
+       status = "disabled";
    };//i2c2
         spi@988000 {
-       status = "disable";
+       status = "disabled";
        spidev@0 {
 	       compatible = "qcom,spidev";
 	       spi-max-frequency = <50000000>;
@@ -29,18 +29,21 @@
    };//uart2
         
         i2c@998000 {
-       status = "disable";
+       status = "disabled";
    };//i2c6
         spi@998000 {
-       status = "disable";
+       status = "disabled";
        spidev@0 {
 	       compatible = "qcom,spidev";
 	       spi-max-frequency = <50000000>;
 	       reg = <0>;
        };
    };//spi6
-        serial@998000 {
+        serial@994000 {
        status = "okay";
+   };//uart5
+        serial@998000 {
+       status = "disabled";
    };//uart6
     };
     geniqup@ac0000 {
@@ -50,10 +53,10 @@
             };
         };//i2c8
         i2c@a80000 {
-            status = "disable";
+            status = "disabled";
         };//i2c8
         spi@a80000 {
-            status = "disable";
+            status = "disabled";
 	    spidev@0 {
 		    compatible = "qcom,spidev";
 		    spi-max-frequency = <50000000>;
@@ -61,14 +64,14 @@
 	    };
         };//spi8
         serial@a80000 {
-            status = "okay";
+            status = "disabled";
         };//uart8
         
         i2c@a90000 {
-            status = "disable";
+            status = "disabled";
         };//i2c12
         spi@a90000 {
-            status = "disable";
+            status = "okay";
 	    spidev@0 {
 		    compatible = "qcom,spidev";
 		    spi-max-frequency = <50000000>;
@@ -76,7 +79,7 @@
 	    };
         };//spi12
         serial@a90000 {
-            status = "okay";
+            status = "disabled";
         };//uart12
     };
 };
